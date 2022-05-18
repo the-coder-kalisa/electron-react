@@ -17,7 +17,7 @@ const createWindow = () => {
   isDev ? mainWindow.loadURL('http://localhost:3000') : mainWindow.loadFile("src/build/index.html");
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  isDev && mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
